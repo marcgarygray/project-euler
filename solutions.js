@@ -9,29 +9,27 @@
  */
 class Accumulator {
     constructor(max, multiples) {
-        this.max = max
-        this.multiples = multiples
+        this.max = max;
+        this.multiples = multiples;
     }
-    getSum() {
-        let sum = 0
+
+    get sum() {
+        let sum = 0;
         for(let i = 0; i < this.max; i++) {
             for(let j = 0; j < this.multiples.length; j++) {
-                if(i%this.multiples[j] === 0) {
-                    sum += i
-                    break
+                if(i % this.multiples[j] === 0) {
+                    sum += i;
+                    break;
                 }
             }
         }
         return sum
     }
-    get sum() {
-        return this.getSum()
-    }
 }
-const accumulatorOne = new Accumulator(10, [3,5])
-const accumulatorTwo = new Accumulator(1000, [3,5])
-console.log(accumulatorOne.sum) // output: 23
-console.log(accumulatorTwo.sum) // output: 233168
+const accumulatorOne = new Accumulator(10, [3,5]);
+const accumulatorTwo = new Accumulator(1000, [3,5]);
+console.log(accumulatorOne.sum); // output: 23
+console.log(accumulatorTwo.sum); // output: 233168
 
 /*******************************************************************/
 
@@ -49,27 +47,24 @@ console.log(accumulatorTwo.sum) // output: 233168
  */
 class FibSum {
     constructor(max) {
-        this.max = max
+        this.max = max;
     }
-    getSum() {
+
+    get sum() {
         let termOne = 1;
         let termTwo = 2;
         let termThree = 0;
         let sum = 2;
         while (termThree < this.max) {
-            termThree = termOne + termTwo; // 3
+            termThree = termOne + termTwo;
             if (termThree % 2 === 0) sum += termThree;
             termOne = termTwo;
             termTwo = termThree;
         }
         return sum;
-
-    }
-    get sum() {
-        return this.getSum()
     }
 }
-const fibSum = new FibSum(4000000)
+const fibSum = new FibSum(4000000);
 console.log(fibSum.sum) // output: 4613732
 
 /*******************************************************************/
@@ -105,3 +100,63 @@ console.log(largestPrimeFactor.largest); // output: 6857
 
 /*******************************************************************/
 
+/*
+ * https://projecteuler.net/problem=4
+ *
+ */
+class Palindromer {
+    isPalindrome(product) {
+        return product.toString() === product.toString().split('').reverse().join('');
+    }
+
+    get largest() {
+        let max = 0;
+        let i = 999;
+        while (i > 99) {
+            let j = 999;
+            while (j >= i) {
+                const product = i * j;
+                if (this.isPalindrome(product) && product > max) max = product;
+                j--;
+            }
+            i--;
+        }
+        return max;
+    } 
+}
+
+const palindromer = new Palindromer();  
+console.log(palindromer.largest); // output: 906609
+
+/*******************************************************************/
+
+/*
+ * https://projecteuler.net/problem=5
+ * 
+ */
+
+class SmallestMultiple {
+    constructor(max) {
+        this.max = max;
+    }
+
+    get value() {
+        let match = false;
+        let value = this.max;
+        while (!match) {
+            value ++;
+            let counter = this.max;
+            while (counter > 0) {
+                match = true;
+                if (value % counter !== 0) {
+                    match = false;
+                    break;
+                }
+                counter--;
+            }
+        }
+        return value;
+    }
+}
+const smallestMultiple = new SmallestMultiple(20);
+console.log(smallestMultiple.value); // output: 232792560
