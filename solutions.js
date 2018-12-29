@@ -52,15 +52,15 @@ class FibSum {
         this.max = max
     }
     getSum() {
-        let x = 1;
-        let y = 2;
-        let currentTerm = 0;
+        let termOne = 1;
+        let termTwo = 2;
+        let termThree = 0;
         let sum = 2;
-        while (currentTerm < this.max) {
-            currentTerm = x + y; // 3
-            if (currentTerm%2 === 0) sum += currentTerm;
-            x = y;
-            y = currentTerm;
+        while (termThree < this.max) {
+            termThree = termOne + termTwo; // 3
+            if (termThree % 2 === 0) sum += termThree;
+            termOne = termTwo;
+            termTwo = termThree;
         }
         return sum;
 
@@ -71,3 +71,37 @@ class FibSum {
 }
 const fibSum = new FibSum(4000000)
 console.log(fibSum.sum) // output: 4613732
+
+/*******************************************************************/
+
+/*
+ * https://projecteuler.net/problem=3
+ * 
+ * The prime factors of 13195 are 5, 7, 13 and 29.
+ * What is the largest prime factor of the number 600851475143 ?
+ *
+ */
+class LargestPrimeFactor {
+    constructor(number) {
+        this.number = number;
+    }
+
+    get largest() {
+        let number = this.number;
+        let divisor = 2;
+        while (number > 1) {
+            if (number % divisor === 0) {
+                number /= divisor;
+                divisor--;
+            }
+            divisor++
+        }
+        return divisor;
+    }
+}
+
+const largestPrimeFactor = new LargestPrimeFactor(600851475143);
+console.log(largestPrimeFactor.largest); // output: 6857
+
+/*******************************************************************/
+
