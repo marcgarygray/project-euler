@@ -228,4 +228,36 @@ console.log(squareSumDifferencerHundred.difference); // output: 25164150
 
 /*******************************************************************/
 
+/*
+ * https://projecteuler.net/problem=36
+ * 
+ * The decimal number, 585 = 1001001001 (binary), 
+ * is palindromic in both bases.
+ * Find the sum of all numbers, less than one million, 
+ * which are palindromic in base 10 and base 2.
+ *
+ */
+class TwoBasePalindromer {
+    constructor(max) {
+        this.max = max;
+    }
 
+    isPalindrome(number, base) {
+        return  number.toString(base) === number.toString(base).split('').reverse().join('');
+    }
+
+    get sum() {
+        let sum = 0;
+        let number = this.max;
+        while (number > 0) {
+            if (this.isPalindrome(number, 10) && this.isPalindrome(number, 2)) sum += number;
+            number--;
+        }
+        return sum;
+    }
+}
+
+const twoBasePalindromer = new TwoBasePalindromer(1000000);
+console.log(twoBasePalindromer.sum); // output: 872187
+
+/*******************************************************************/
