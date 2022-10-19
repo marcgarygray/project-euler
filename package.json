@@ -1,0 +1,25 @@
+{
+  "name": "project-euler",
+  "version": "0.0.1",
+  "description": "Project Euler solutions",
+  "main": "solutions.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcgarygray/project-euler.git"
+  },
+  "author": "Marc G. Gray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcgarygray/project-euler/issues"
+  },
+  "homepage": "https://github.com/marcgarygray/project-euler#readme",
+  "dependencies": {
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1"
+  }
+}
