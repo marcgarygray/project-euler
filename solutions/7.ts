@@ -25,3 +25,5 @@ function nthPrime(n: number) {
   }
   return workingPrime;
 }
+
+console.log(nthPrime(10001)); // output: 104743

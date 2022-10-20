@@ -35,7 +35,7 @@ console.log(sumOfMultiples({ below: 1000, divisors: [3, 5] })); // output: 23316
  * find the sum of the even-valued terms.
  *
  */
-function fibonacciSum(max) {
+function evenFibonacciSum(max) {
     let termOne = 1;
     let termTwo = 2;
     let termThree = 0;
@@ -49,7 +49,7 @@ function fibonacciSum(max) {
     }
     return sum;
 }
-console.log(fibonacciSum(4000000)); // output: 4613732
+console.log(evenFibonacciSum(4000000)); // output: 4613732
 /*
  * https://projecteuler.net/problem=7
  *
@@ -77,3 +77,4 @@ function nthPrime(n) {
     }
     return workingPrime;
 }
+console.log(nthPrime(10001)); // output:

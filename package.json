@@ -2,7 +2,7 @@
   "name": "project-euler",
   "version": "0.0.1",
   "description": "Project Euler solutions",
-  "main": "solutions.html",
+  "main": "dist/solutions.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

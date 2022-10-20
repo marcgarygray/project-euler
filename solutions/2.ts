@@ -10,7 +10,7 @@
  * find the sum of the even-valued terms.
  *
  */
-function fibonacciSum(max: number) {
+function evenFibonacciSum(max: number) {
   let termOne = 1;
   let termTwo = 2;
   let termThree = 0;
@@ -24,4 +24,4 @@ function fibonacciSum(max: number) {
   return sum;
 }
 
-console.log(fibonacciSum(4000000)); // output: 4613732
+console.log(evenFibonacciSum(4000000)); // output: 4613732
