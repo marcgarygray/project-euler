@@ -7,17 +7,24 @@
  * Find the sum of all the multiples of 3 or 5 below 1000.
  *
  */
-function accumulator(max: number, multiples: [number, number]) {
+
+type SumOfMultiplesArg = {
+  below: number;
+  divisors: number[];
+};
+
+function sumOfMultiples({ below, divisors }: SumOfMultiplesArg) {
   let sum = 0;
-  for (let i = 0; i < max; i++) {
-    for (let j = 0; j < multiples.length; j++) {
-      if (i % multiples[j] === 0) {
+  for (let i = 0; i < below; i++) {
+    divisors.some((divisor) => {
+      if (i % divisor === 0) {
         sum += i;
-        break;
+        return true;
       }
-    }
+      return false;
+    });
   }
   return sum;
 }
-console.log(accumulator(10, [3, 5])); // output: 23
-console.log(accumulator(1000, [3, 5])); // output: 233168
+console.log(sumOfMultiples({ below: 10, divisors: [3, 5] })); // output: 23
+console.log(sumOfMultiples({ below: 1000, divisors: [3, 5] })); // output: 233168
