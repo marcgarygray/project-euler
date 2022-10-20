@@ -16,10 +16,8 @@
     "url": "https://github.com/marcgarygray/project-euler/issues"
   },
   "homepage": "https://github.com/marcgarygray/project-euler#readme",
-  "dependencies": {
-    "typescript": "^4.8.4"
-  },
   "devDependencies": {
-    "@tsconfig/recommended": "^1.0.1"
+    "@tsconfig/recommended": "^1.0.1",
+    "typescript": "^4.8.4"
   }
 }
