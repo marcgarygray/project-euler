@@ -16,9 +16,9 @@ class LargestPrimeFactor {
     while (number > 1) {
       if (number % divisor === 0) {
         number /= divisor;
-        divisor--;
+      } else {
+        divisor++;
       }
-      divisor++;
     }
     return divisor;
   }

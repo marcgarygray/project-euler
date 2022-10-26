@@ -6,13 +6,13 @@
  *
  */
 function nthPrime(n: number) {
-  var workingPrime = 2;
-  var nth = 1;
+  let workingPrime = 2;
+  let nth = 1;
   while (nth < n) {
     workingPrime += 1;
     if (workingPrime % 2 !== 0) {
-      var divisorFound = false;
-      for (var i = 2; i < workingPrime / 2; i++) {
+      let divisorFound = false;
+      for (let i = 2; i < workingPrime / 2; i++) {
         if (workingPrime % i === 0) {
           divisorFound = true;
           break;
