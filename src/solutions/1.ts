@@ -13,7 +13,7 @@ type SumOfMultiplesArg = {
   divisors: number[];
 };
 
-function sumOfMultiples({ below, divisors }: SumOfMultiplesArg) {
+export function sumOfMultiples({ below, divisors }: SumOfMultiplesArg) {
   let sum = 0;
   for (let i = 0; i < below; i++) {
     divisors.some((divisor) => {
@@ -26,6 +26,3 @@ function sumOfMultiples({ below, divisors }: SumOfMultiplesArg) {
   }
   return sum;
 }
-
-console.log(sumOfMultiples({ below: 10, divisors: [3, 5] })); // output: 23
-console.log(sumOfMultiples({ below: 1000, divisors: [3, 5] })); // output: 233168
