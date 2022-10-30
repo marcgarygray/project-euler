@@ -1,9 +1,6 @@
 {
-  "extends": "@tsconfig/recommended/tsconfig.json",
+  "extends": "@tsconfig/node12/tsconfig.json",
   "compilerOptions": {
-    "module": "system",
-    "outFile": "dist/solutions.js"
-  },
-  "include": ["solutions/*.*"],
-  "exclude": ["node_modules"]
+    "outDir": "dist"
+  }
 }

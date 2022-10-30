@@ -1,37 +1,4 @@
 /*
- * https://projecteuler.net/problem=3
- *
- * The prime factors of 13195 are 5, 7, 13 and 29.
- * What is the largest prime factor of the number 600851475143 ?
- *
- */
-class LargestPrimeFactor {
-  constructor(number) {
-    this.number = number;
-  }
-
-  get largest() {
-    let number = this.number;
-    let divisor = 2;
-    while (number > 1) {
-      if (number % divisor === 0) {
-        number /= divisor;
-      } else {
-        divisor++;
-      }
-    }
-    return divisor;
-  }
-}
-
-const largestPrimeFactorOne = new LargestPrimeFactor(13195);
-const largestPrimeFactorTwo = new LargestPrimeFactor(600851475143);
-console.log(largestPrimeFactorOne.largest); // output: 29
-console.log(largestPrimeFactorTwo.largest); // output: 6857
-
-/*******************************************************************/
-
-/*
  * https://projecteuler.net/problem=4
  *
  * A palindromic number reads the same both ways.
