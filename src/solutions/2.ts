@@ -10,7 +10,12 @@
  * find the sum of the even-valued terms.
  *
  */
-export function evenFibonacciSum({ max }: { max: number }) {
+
+type EvenFibonacciSumArg = {
+  max: number;
+};
+
+export function evenFibonacciSum({ max }: EvenFibonacciSumArg) {
   let termOne = 1;
   let termTwo = 2;
   let termThree = 0;

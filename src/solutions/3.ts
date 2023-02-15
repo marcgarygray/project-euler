@@ -5,7 +5,12 @@
  * What is the largest prime factor of the number 600851475143 ?
  *
  */
-function largestPrimeFactor({ value }: { value: number }) {
+
+type LargestPrimeFactorArg = {
+  value: number;
+};
+
+export function largestPrimeFactor({ value }: LargestPrimeFactorArg) {
   let primeFactorCandidate = 2;
   while (value > 1) {
     if (value % primeFactorCandidate === 0) {
