@@ -21,6 +21,3 @@ export function largestPrimeFactor({ value }: LargestPrimeFactorArg) {
   }
   return primeFactorCandidate;
 }
-
-console.log(largestPrimeFactor({ value: 13195 })); // output: 29
-console.log(largestPrimeFactor({ value: 600851475143 })); // output: 6857

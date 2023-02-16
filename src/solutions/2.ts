@@ -20,7 +20,7 @@ export function evenFibonacciSum({ max }: EvenFibonacciSumArg) {
   let termTwo = 2;
   let termThree = 0;
   let sum = 2;
-  while (termThree < max) {
+  while (termThree <= max) {
     termThree = termOne + termTwo;
     if (termThree % 2 === 0) sum += termThree;
     termOne = termTwo;
