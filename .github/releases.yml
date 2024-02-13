@@ -13,6 +13,6 @@ jira:
 
 branchTicketRestrictions:
   main:
-    EC:
+    - EC:
       - Approved
       - Implemented
