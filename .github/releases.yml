@@ -10,3 +10,9 @@ enableComments: true
 jira:
   project: ENGTEST
   name: DutchieBot Releases - MGG
+
+branchTicketRestrictions:
+  r/hot:
+    EC:
+      - Approved
+      - Implemented
