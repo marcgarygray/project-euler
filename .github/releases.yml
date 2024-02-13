@@ -1,0 +1,12 @@
+main: main
+develop: develop
+releaseCandidate: develop
+releaseBranches:
+  - develop
+  - main
+
+enableComments: true
+
+jira:
+  project: ENGTEST
+  name: DutchieBot Releases - MGG
