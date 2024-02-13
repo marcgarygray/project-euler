@@ -26,6 +26,7 @@ function promptUser() {
     )
   );
   if (input.toLowerCase() === 'q') {
+    console.log('test the ol bot');
     return;
   }
   const inputAsNumber = Number(input);
