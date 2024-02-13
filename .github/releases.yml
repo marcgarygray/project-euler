@@ -12,7 +12,7 @@ jira:
   name: DutchieBot Releases - MGG
 
 branchTicketRestrictions:
-  r/hot:
+  main:
     EC:
       - Approved
       - Implemented
